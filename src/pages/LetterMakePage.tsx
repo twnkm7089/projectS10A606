@@ -1,3 +1,9 @@
+import { useState } from "react";
+import VideoCard from "../components/VideoCard";
+
+//내거인지 아닌지 판별
+
+
 export default function LetterMakePage() {
   return (
     <section className="section-center">
@@ -51,42 +57,9 @@ export default function LetterMakePage() {
           <div className="px-4">
             <h5 className="text-2xl">선택하지 않은 영상</h5>
             <ul>
-              <li className="relative flex items-center border p-2 my-2">
-                <img
-                  className="w-32 h-24"
-                  src="/src/assets/images/nothumb.png"
-                />
-                <p className="mx-10 text-3xl">제목</p>
-                <span className="material-symbols-outlined text-green-500 absolute -top-4 -right-4 text-3xl">
-                  add_circle
-                </span>
-              </li>
-              <li className="relative flex items-center border p-2 my-2">
-                <img
-                  className="w-32 h-24"
-                  src="/src/assets/images/nothumb.png"
-                />
-                <p className="mx-10 text-3xl">제목</p>
-                <span className="material-symbols-outlined text-green-500 absolute -top-4 -right-4 text-3xl">
-                  add_circle
-                </span>
-                <span className="material-symbols-outlined text-red-500 absolute bottom-1 right-1 text-3xl">
-                  delete
-                </span>
-              </li>
-              <li className="relative flex items-center border p-2 my-2">
-                <img
-                  className="w-32 h-24"
-                  src="/src/assets/images/nothumb.png"
-                />
-                <p className="mx-10 text-3xl">제목</p>
-                <span className="material-symbols-outlined text-green-500 absolute -top-4 -right-4 text-3xl">
-                  add_circle
-                </span>
-                <span className="material-symbols-outlined text-red-500 absolute bottom-1 right-1 text-3xl">
-                  delete
-                </span>
-              </li>
+              <VideoCard isMine={false}/>
+              <VideoCard isMine={true}/>
+              <VideoCard isMine={true}/>
             </ul>
           </div>
         </div>
